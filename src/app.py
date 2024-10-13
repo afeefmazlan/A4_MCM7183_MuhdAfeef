@@ -14,10 +14,10 @@ app = dash.Dash(
 server = app.server
 
 # Import main data
-df = pd.read_csv("src/input/data_cleaned.csv")
+df = pd.read_csv("input/data_cleaned.csv")
 
 # Import lat/long data
-lat_long_df = pd.read_csv("src/input/lat_long_data.csv")
+lat_long_df = pd.read_csv("input/lat_long_data.csv")
 
 # Merge data on city
 df = df.merge(lat_long_df, on="city", how="left")
